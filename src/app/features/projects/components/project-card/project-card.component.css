@@ -1,0 +1,16 @@
+.card-container{
+    color: white;
+    background-color: rgb(1, 0, 17); 
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.tecnology-container{
+    display: flex;
+    gap: 5px;
+}
+.tecnology-item{
+    border: 1px solid;
+    padding: 5px;
+    border-radius: 25px;
+}

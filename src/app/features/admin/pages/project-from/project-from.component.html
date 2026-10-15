@@ -1,0 +1,50 @@
+<div class="form-wrapper">
+
+<div class="form-container">
+<form [formGroup]="form" (submit)="onSubmit()">
+    <fieldset>
+        <label for="">Nombre</label>
+        <input type="text" placeholder="Introduce Nombre..." formControlName="name">
+        @if (form.get('name')?.hasError('required') && form.get('name')?.touched) {
+            <p>El nombre es requerido</p>
+        }@else if (form.get('name')?.hasError('minlength') && form.get('name')?.touched) {
+            <p>El nombre tiene que tener mas de 3 caracteres</p>
+        }@else if (form.get('name')?.hasError('maxlength') && form.get('name')?.touched) {
+            <p>El nombre tiene que tener menor de 25 caracteres</p>
+        }
+    </fieldset>
+
+    <fieldset>
+        <label for="">Descripcion</label>
+        <input type="text" placeholder="Introduce descripcion..." formControlName="description">
+        @if (form.get('descripcion')?.hasError('required') && form.get('descripcion')?.touched) {
+            <p>La descripcion es requerido</p>
+        }
+    </fieldset>
+    
+    <fieldset>
+    <label for="">Tecnologias</label>
+    <div class="technologies-container">
+        @for (tec of tecnologies(); track $index) {
+                <p (click)="selectTecnology(tec)" style="cursor: pointer;" class="technology-item">{{tec.name}}</p>
+            }
+    </div>
+    </fieldset>
+
+    <div class="selected-technologies-container">
+        <p>Tecnologias seleccionadas</p>
+        <div class="selected-technologies">
+         @for (tec of selectedTecnologies(); track $index) {
+                <p class="selected-tecnology-card">{{tec.name}}</p>
+            }
+        </div>
+    </div>
+
+    <div class="action-btn">
+    <button>Crear proyecto</button>
+    </div>
+</form>
+
+</div>
+
+</div>

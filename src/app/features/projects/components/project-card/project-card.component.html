@@ -1,0 +1,9 @@
+<div class="card-container">
+    <p>{{project?.name}}</p>
+    <p>{{project?.description}}</p>
+    <div class="tecnology-container">
+    @for (tecnology of project?.tecnologies; track $index) {
+        <p class="tecnology-item">{{tecnology.name}}</p>
+    }
+    </div>
+</div>

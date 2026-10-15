@@ -1,0 +1,6 @@
+<h1>Proyectos</h1>
+<div class="projects-container">
+@for (project of projects(); track $index) {
+    <project-card [project]="project"></project-card>
+}
+</div>

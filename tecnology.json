@@ -1,0 +1,14 @@
+{
+  "tecnologies": [
+    { "id": "1", "name": "React" },
+    { "id": "2", "name": "Angular" },
+    { "id": "3", "name": "Vue.js" },
+    { "id": "4", "name": "Node.js" },
+    { "id": "5", "name": "TypeScript" },
+    { "id": "6", "name": "JavaScript" },
+    { "id": "7", "name": "HTML5" },
+    { "id": "8", "name": "CSS3" },
+    { "id": "9", "name": "Tailwind CSS" },
+    { "id": "10", "name": "NestJS" }
+  ]
+}

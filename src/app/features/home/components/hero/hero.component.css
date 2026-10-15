@@ -1,0 +1,54 @@
+.hero-container{
+    background-color: #0b0f19;
+    margin: 0;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    padding: 20px;
+}
+
+.title-hero{
+    font-size: 1.8rem;
+    margin: 0;
+    color: #ffffff;
+}
+
+.about-me{
+    width: 40%;
+    color: white;
+}
+
+.btn-proyect{
+    margin-top: 30px;
+}
+
+button{
+    font-size: 1.4rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.2s ease, opacity 0.2s ease;
+}
+
+.contact-links{
+    display: flex;
+    justify-content: center;
+}
+
+ul{
+    display: flex;
+    gap: 10px;
+}
+
+a{
+    border: 1px solid white;
+    border-radius: 25px;
+    padding: 5px 20px;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+li{
+    list-style: none;
+}

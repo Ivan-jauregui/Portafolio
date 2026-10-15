@@ -1,0 +1,55 @@
+{
+  "projects": [
+    {
+      "name": "blabalbal",
+      "description": "blablala",
+      "tecnologies": [
+        {
+          "id": "2",
+          "name": "Angular"
+        },
+        {
+          "id": "3",
+          "name": "Vue.js"
+        },
+        {
+          "id": "1",
+          "name": "React"
+        }
+      ],
+      "id": "0n_kUVzWi_M"
+    },
+    {
+      "name": "hola",
+      "description": "chau",
+      "tecnologies": [
+        {
+          "id": "6",
+          "name": "JavaScript"
+        },
+        {
+          "id": "10",
+          "name": "NestJS"
+        },
+        {
+          "id": "7",
+          "name": "HTML5"
+        },
+        {
+          "id": "2",
+          "name": "Angular"
+        },
+        {
+          "id": "5",
+          "name": "TypeScript"
+        },
+        {
+          "id": "8",
+          "name": "CSS3"
+        }
+      ],
+      "id": "L0vtbtbiZMY"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
