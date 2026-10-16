@@ -1,59 +1,40 @@
-# Portafolio
+# Portfolio y Gestión de Proyectos - Iván Denzel Jauregui
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.8.
+Plataforma web moderna orientada a la presentación de marca personal, porfolio de proyectos y panel de administración, desarrollada con **Angular** y conectada a una API REST simulada con `json-server`.
 
-## Development server
+---
 
-To start a local development server, run:
+## 🛠️ Información del Desarrollador y Stack
+* **Autor:** Iván Denzel Jauregui
+* **Versión de Angular:** `19.2.25`
+* **Enfoque:** Arquitectura Frontend moderna con componentes Standalone y Control Flow, consumo de APIs y diseño UI/UX responsivo.
 
-```bash
-ng serve
-```
+---
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## 📦 Instrucciones para Instalar las Dependencias
 
-## Code scaffolding
+Sigue estos pasos para configurar el proyecto en tu entorno local:
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+1. **Clonar el repositorio:**
+   ```bash
+   git clone <url-del-repositorio>
+   cd <nombre-de-carpeta>
 
-```bash
-ng generate component component-name
-```
+Instalar dependencias:
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Bash
+npm install
+🚀 Instrucciones para Ejecutar la Aplicación
+Para que la aplicación funcione correctamente y se comunique con la base de datos simulada, debes ejecutar dos servicios en terminales independientes:
 
-```bash
-ng generate --help
-```
+1. Ejecutar json-server (Backend simulado)
+Abre una terminal y ejecuta el servidor local de datos (asegúrate de tener tu archivo db.json configurado):
 
-## Building
+Bash
+npx json-server --watch db.json --port 3000
+2. Ejecutar la aplicación de Angular
+Abre una segunda terminal y levanta el servidor de desarrollo:
 
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Bash
+npm start
+(O también puedes utilizar ng serve). Una vez compilado, abre tu navegador e ingresa a http://localhost:4200/.
