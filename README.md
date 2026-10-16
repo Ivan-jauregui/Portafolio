@@ -45,3 +45,26 @@ npm start
 
 *(O también puedes utilizar `ng serve`)*. Una vez compilado, abre tu navegador e ingresa a http://localhost:4200/.
 
+
+## 🔐 Panel de Administración
+
+Estas rutas están destinadas a la gestión interna de la aplicación, permitiendo la creación, actualización y visualización de proyectos, experiencia laboral y solicitudes de trabajo recibidas.
+
+### 📁 Gestión de Proyectos y Experiencia
+* **Crear Proyecto:** `/admin/form/project`  
+  Renderiza el formulario limpio para dar de alta un nuevo proyecto en el portafolio.
+* **Editar Proyecto:** `/admin/form/project/:id`  
+  Carga el formulario con los datos del proyecto correspondiente al `:id` para su actualización.
+* **Crear Experiencia:** `/admin/form/experience`  
+  Formulario dedicado a añadir un nuevo registro de experiencia laboral.
+* **Editar Experiencia:** `/admin/form/experience/:id`  
+  Permite modificar un registro de experiencia existente mediante su `:id`.
+
+### 📧 Gestión de Solicitudes (Requests)
+Estas rutas administran las interacciones recibidas a través de la plataforma, funcionando como un buzón para aplicar a ofertas o enviar solicitudes de trabajo:
+* **Lista de Solicitudes:** `/admin/projects/request`  
+  Muestra una bandeja de entrada con el listado completo de todas las solicitudes de trabajo recibidas.
+* **Detalle de Solicitud:** `/admin/projects/request/detail/:id`  
+  Permite visualizar de forma detallada la información, mensajes y archivos adjuntos de una solicitud específica filtrada por su `:id`.
+
+
