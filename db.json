@@ -49,6 +49,85 @@
         }
       ],
       "id": "L0vtbtbiZMY"
+    },
+    {
+      "id": "07d0",
+      "name": "rer",
+      "description": "rere",
+      "tecnologies": [
+        {
+          "id": "1",
+          "name": "React"
+        },
+        {
+          "id": "5",
+          "name": "TypeScript"
+        }
+      ]
+    },
+    {
+      "id": "074d",
+      "name": "rrr",
+      "description": "rrr",
+      "tecnologies": [
+        {
+          "id": "2",
+          "name": "Angular"
+        }
+      ]
+    },
+    {
+      "id": "e8ca",
+      "name": "rrrrr",
+      "description": "rrrr",
+      "tecnologies": [
+        {
+          "id": "2",
+          "name": "Angular"
+        }
+      ]
+    }
+  ],
+  "skills": [
+    { 
+      "id": "sk-1", 
+      "name": "Java 21", 
+      "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" 
+    },
+    { 
+      "id": "sk-2", 
+      "name": "Spring Boot", 
+      "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/spring/spring-original.svg" 
+    },
+    { 
+      "id": "sk-3", 
+      "name": "Node.js", 
+      "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg" 
+    },
+    { 
+      "id": "sk-4", 
+      "name": "PostgreSQL", 
+      "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg" 
+    },
+    { 
+      "id": "sk-5", 
+      "name": "Angular", 
+      "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/angular/angular-original.svg" 
+    },
+    { 
+      "id": "sk-6", 
+      "name": "TypeScript", 
+      "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" 
+    },
+    { 
+      "id": "sk-7", 
+      "name": "React", 
+      "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" 
+    },
+    { 
+      "id": "sk-8", 
+      "name": "Tailwind CSS", 
+      "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-original.svg" 
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

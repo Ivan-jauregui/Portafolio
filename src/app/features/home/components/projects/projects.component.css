@@ -1,0 +1,91 @@
+/* Reset local */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.projects-section {
+  width: 100%;
+  background-color: #161a23; /* Fondo azul noche de la paleta */
+  color: #ffffff;
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.projects-container {
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+/* Grilla de proyectos en 2 columnas (adaptable) */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+/* Tarjeta de proyecto */
+.project-card {
+  background-color: #222836;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-3px);
+  border-color: #ff5364; /* Acento coral neón al hacer hover */
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.project-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #9da8b6;
+}
+
+/* Chips / Pills de tecnologías */
+.tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  margin-top: auto;
+}
+
+.tech-chip {
+  background-color: #161a23;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #d1d5db;
+  padding: 5px 14px;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}

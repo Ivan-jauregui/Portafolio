@@ -1,0 +1,51 @@
+<section class="experience-section" aria-labelledby="experience-title">
+  <div class="experience-container">
+    <h2 id="experience-title" class="section-title">Experience</h2>
+
+    <div class="timeline-wrapper">
+      <!-- Línea vertical de tiempo -->
+      <div class="timeline-line" aria-hidden="true"></div>
+
+      <div class="experience-grid">
+        @for (item of experiences(); track $index) {
+          <article class="timeline-item">
+            <!-- Círculo / Marcador de la línea de tiempo -->
+            <div class="timeline-node" aria-hidden="true">
+              <span class="node-dot"></span>
+            </div>
+
+            <!-- Tarjeta de Experiencia -->
+            <div class="experience-card">
+              <div class="card-header">
+                <div>
+                  <h3 class="role-title">{{ item.role }}</h3>
+                  <span class="company-name">{{ item.company }}</span>
+                </div>
+                <span class="period-badge">{{ item.period }}</span>
+              </div>
+
+              @if (item.badge) {
+                <div class="achievement-badge">
+                  ✨ {{ item.badge }}
+                </div>
+              }
+
+              <p class="description">{{ item.description }}</p>
+
+              <!-- Lista de tecnologías utilizadas -->
+              <ul class="tech-list" aria-label="Tecnologías utilizadas">
+                @for (tech of item.tecnologies; track tech.id) {
+                  <li class="tech-chip">
+                    {{ tech.name }}
+                  </li>
+                }
+              </ul>
+            </div>
+          </article>
+        } @empty {
+          <p class="description">No hay experiencias registradas por el momento.</p>
+        }
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,54 +1,140 @@
-.hero-container{
-    background-color: #0b0f19;
-    margin: 0;
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    padding: 20px;
+/* Reset local */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.title-hero{
-    font-size: 1.8rem;
-    margin: 0;
-    color: #ffffff;
+/* Hero Section */
+.hero-section {
+  width: 100%;
+  min-height: 85vh;
+  background-color: #161a23; /* Fondo azul noche de la Foto 2 */
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
 }
 
-.about-me{
-    width: 40%;
-    color: white;
+.hero-content {
+  max-width: 750px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
-.btn-proyect{
-    margin-top: 30px;
+/* Status Pill */
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #222836;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 8px 22px;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  color: #d1d5db;
+  margin-bottom: 28px;
 }
 
-button{
-    font-size: 1.4rem;
-    padding: 0.6rem 1.2rem;
-    border-radius: 25px;
-    border: none;
-    cursor: pointer;
-    font-size: 0.9rem;
-    transition: background-color 0.2s ease, opacity 0.2s ease;
+.status-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #ff5364;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #ff5364;
 }
 
-.contact-links{
-    display: flex;
-    justify-content: center;
+/* Headings con HGROUP */
+.hero-heading-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
 }
 
-ul{
-    display: flex;
-    gap: 10px;
+.main-heading {
+  font-size: clamp(2.8rem, 6vw, 4.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  color: #ffffff;
+  letter-spacing: -0.02em;
 }
 
-a{
-    border: 1px solid white;
-    border-radius: 25px;
-    padding: 5px 20px;
-    text-decoration: none;
-    color: white;
-    cursor: pointer;
+.highlight-name {
+  color: #ff5364; /* Coral neón de la Foto 2 */
 }
 
-li{
-    list-style: none;
+.sub-heading {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+}
+
+/* Description */
+.description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #9da8b6;
+  max-width: 620px;
+  margin-bottom: 36px;
+}
+
+/* CTA Group */
+.cta-group {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+}
+
+.btn-solid {
+  background-color: #ff5364;
+  color: #ffffff;
+  padding: 14px 36px;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 20px rgba(255, 83, 100, 0.3);
+}
+
+.btn-solid:hover {
+  background-color: #e04354;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(255, 83, 100, 0.45);
+}
+
+.btn-ghost {
+  background-color: #161a23;
+  color: #ffffff;
+  border: 1px solid #ff5364;
+  padding: 14px 36px;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.btn-ghost:hover {
+  background-color: rgba(255, 83, 100, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .cta-group {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn-solid, .btn-ghost {
+    width: 100%;
+    text-align: center;
+  }
 }

@@ -1,18 +1,30 @@
-<div class="hero-container">
-    <h1 class="title-hero">Fullstack Developer</h1>
-    <div class="about-me">
-Lorem ipsum dolor sit amet consectetur adipiscing elit at egestas ut, ridiculus metus sodales fermentum suscipit sapien sed torquent odio. Augue sociis egestas proin accumsan imperdiet lacinia magna.
-    </div>
-    <div class="btn-proyect">
-        <button>Proyectos</button>
+<section class="hero-section" aria-labelledby="hero-title">
+  <div class="hero-content">
+    
+    <!-- Status / Badge semántico -->
+    <p class="status-pill">
+      <span class="status-dot" aria-hidden="true"></span>
+      <span>Available for new Projects</span>
+    </p>
+
+    <!-- HGROUP para jerarquía correcta de encabezados -->
+    <hgroup class="hero-heading-group">
+      <h1 id="hero-title" class="main-heading">
+        Hey! , I am <span class="highlight-name">Iván</span>
+      </h1>
+      <p class="sub-heading">Full-Stack & Backend Developer</p>
+    </hgroup>
+
+    <!-- Descripción principal -->
+    <p class="description">
+      Desarrollador enfocado en construir arquitecturas backend robustas con Java / Spring Boot y Node.js, combinadas con interfaces web modernas y escalables.
+    </p>
+
+    <!-- Acciones agrupadas semánticamente -->
+    <div class="cta-group" role="group" aria-label="Acciones de contacto y proyectos">
+      <a href="#projects" class="btn-solid">View My Work</a>
+      <a href="#contact" class="btn-ghost">Get in Touch</a>
     </div>
 
-    <nav class="contact-links">
-        <ul>
-            <li><a href="">Github</a></li>
-            <li><a href="">Linkedin</a></li>
-            <li><a href="">Email</a></li>
-        </ul>
-    </nav>
-</div>
-
+  </div>
+</section>

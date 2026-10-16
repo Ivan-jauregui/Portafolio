@@ -1,0 +1,27 @@
+<section class="projects-section" aria-labelledby="projects-title">
+  <div class="projects-container">
+    <h2 id="projects-title" class="section-title">Projects</h2>
+
+    <div class="projects-grid">
+      @for (project of projects(); track project.id) {
+        <article class="project-card">
+          <div class="card-content">
+            <h3 class="project-title">{{ project.name }}</h3>
+            <p class="description">{{ project.description }}</p>
+          </div>
+
+          <!-- Lista de tecnologías del proyecto -->
+          <ul class="tech-list" aria-label="Tecnologías utilizadas">
+            @for (tech of project.tecnologies; track tech.id) {
+              <li class="tech-chip">
+                {{ tech.name }}
+              </li>
+            }
+          </ul>
+        </article>
+      } @empty {
+        <p class="description">No hay proyectos disponibles por el momento.</p>
+      }
+    </div>
+  </div>
+</section>

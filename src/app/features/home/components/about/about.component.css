@@ -1,0 +1,68 @@
+/* Reset local para evitar márgenes o rellenos no deseados */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.section-container {
+  width: 100%;
+  background-color: #161a23; /* Fondo azul noche de la paleta */
+  color: #ffffff;
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.about-grid {
+  width: 100%;
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.description {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #9da8b6;
+  margin-bottom: 16px;
+}
+
+/* Tarjeta interna en tono azul slate */
+.about-card {
+  background-color: #222836;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  color: #ffffff;
+}
+
+.card-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.card-text {
+  color: #9da8b6;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,151 @@
+/* Reset local */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.experience-section {
+  width: 100%;
+  background-color: #161a23; /* Fondo azul noche */
+  color: #ffffff;
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.experience-container {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #ffffff;
+  text-align: center;
+}
+
+/* Contenedor principal de la línea de tiempo */
+.timeline-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+/* Línea vertical central/izquierda de la timeline */
+.timeline-line {
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 15px; /* Posición alineada con los círculos */
+  width: 2px;
+  background-color: rgba(255, 83, 100, 0.3); /* Línea con tono coral suave */
+  z-index: 1;
+}
+
+.experience-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Elemento individual de la línea de tiempo */
+.timeline-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+/* Nodo / Círculo de la línea de tiempo (estilo imagen 1) */
+.timeline-node {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #161a23;
+  border: 2px solid #ff5364; /* Borde coral neón */
+  border-radius: 50%;
+  margin-top: 4px;
+  box-shadow: 0 0 10px rgba(255, 83, 100, 0.3);
+}
+
+.node-dot {
+  width: 10px;
+  height: 10px;
+  background-color: #ff5364;
+  border-radius: 50%;
+}
+
+/* Tarjeta de experiencia */
+.experience-card {
+  background-color: #222836;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 28px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-2px);
+  border-color: #ff5364;
+}
+
+.role-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #9da8b6;
+}
+
+/* Chips de tecnologías */
+.tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  margin-top: 8px;
+}
+
+.tech-chip {
+  background-color: #161a23;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #d1d5db;
+  padding: 6px 16px;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* Adaptación responsive para pantallas chicas */
+@media (max-width: 600px) {
+  .timeline-line {
+    left: 12px;
+  }
+  .timeline-item {
+    gap: 16px;
+  }
+  .timeline-node {
+    width: 26px;
+    height: 26px;
+  }
+  .node-dot {
+    width: 6px;
+    height: 6px;
+  }
+}
