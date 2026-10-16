@@ -4,14 +4,13 @@ Plataforma web moderna orientada a la presentación de marca personal, porfolio 
 
 ---
 
-## 🛠️ Información del Desarrollador y Stack
+## Información del Desarrollador y Stack
 * **Autor:** Iván Denzel Jauregui
 * **Versión de Angular:** `19.2.25`
-* **Enfoque:** Arquitectura Frontend moderna con componentes Standalone y Control Flow, consumo de APIs y diseño UI/UX responsivo.
 
 ---
 
-## 📦 Instrucciones para Instalar las Dependencias
+## Instrucciones para Instalar las Dependencias
 
 Sigue estos pasos para configurar el proyecto en tu entorno local:
 
@@ -23,7 +22,7 @@ Sigue estos pasos para configurar el proyecto en tu entorno local:
 Instalar dependencias:
 
 ```bash
-npm install
+npm install --legacy-peer-deps
 ```
 
 ## 🚀 Instrucciones para Ejecutar la Aplicación
