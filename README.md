@@ -22,19 +22,27 @@ Sigue estos pasos para configurar el proyecto en tu entorno local:
 
 Instalar dependencias:
 
-Bash
+```bash
 npm install
-🚀 Instrucciones para Ejecutar la Aplicación
+```
+
+## 🚀 Instrucciones para Ejecutar la Aplicación
+
 Para que la aplicación funcione correctamente y se comunique con la base de datos simulada, debes ejecutar dos servicios en terminales independientes:
 
-1. Ejecutar json-server (Backend simulado)
-Abre una terminal y ejecuta el servidor local de datos (asegúrate de tener tu archivo db.json configurado):
+### 1. Ejecutar json-server (Backend simulado)
+Abre una terminal y ejecuta el servidor local de datos (asegúrate de tener tu archivo `db.json` configurado):
 
-Bash
+```bash
 npx json-server --watch db.json --port 3000
-2. Ejecutar la aplicación de Angular
+```
+
+### 2. Ejecutar la aplicación de Angular
 Abre una segunda terminal y levanta el servidor de desarrollo:
 
-Bash
+```bash
 npm start
-(O también puedes utilizar ng serve). Una vez compilado, abre tu navegador e ingresa a http://localhost:4200/.
+```
+
+*(O también puedes utilizar `ng serve`)*. Una vez compilado, abre tu navegador e ingresa a http://localhost:4200/.
+
