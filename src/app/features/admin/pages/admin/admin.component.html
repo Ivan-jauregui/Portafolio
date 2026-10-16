@@ -1,30 +1,18 @@
 <div class="admin-dashboard">
     <header class="dashboard-header">
         <h1>Panel de Administración</h1>
-        <button routerLink="/form" class="create-btn">Crear Proyecto</button>
+        <div class="header-btns">
+        <button routerLink="/projects/request" class="request-btn" style="text-decoration: none; padding: 10px 18px; border-radius: 10px;">
+            <ng-icon name="lucideFileText" size="16"></ng-icon>
+            Ver Solicitudes
+        </button>
+        <button routerLink="/form/project" class="create-btn">Crear Proyecto</button>
+        </div>
     </header>
 
-    <section class="projects-section">
-        <h2>Proyectos Actuales</h2>
-        
-        <div class="projects-grid">
-            @for (project of projects(); track project.id || $index) {
-                <article class="card">
-                    <h3 class="project-title">{{project?.name}}</h3>
-                    <p class="project-description">{{project?.description}}</p>
-                    
-                    <div class="technology-list">
-                        @for (technology of project?.tecnologies; track technology.id || $index) {
-                            <span class="technology-badge">{{technology.name}}</span>
-                        }
-                    </div>
-                    
-                    <div class="card-actions">
-                        <button class="btn btn-update" (click)="goToUpdate(project.id!)">Actualizar</button>
-                        <button class="btn btn-delete" (click)="deleteProject(project.id!)">Eliminar</button>
-                    </div>
-                </article>
-            }
-        </div>
-    </section>
+    <project-section></project-section>
+
+    <skill-section></skill-section>
+
+    <experience-section></experience-section>
 </div>

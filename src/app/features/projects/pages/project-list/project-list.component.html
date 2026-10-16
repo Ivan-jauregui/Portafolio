@@ -1,6 +1,49 @@
-<h1>Proyectos</h1>
-<div class="projects-container">
-@for (project of projects(); track $index) {
-    <project-card [project]="project"></project-card>
-}
-</div>
+<section class="projects-section" aria-labelledby="projects-title">
+  <div class="projects-container">
+
+    <div class="projects-header-row">
+      <h2 id="projects-title" class="section-title">Projects</h2>
+
+      <div class="search-filter-container">
+        <div class="search-input-wrapper">
+          <ng-icon name="lucideSearch" class="search-icon" size="18"></ng-icon>
+          <input 
+            type="text" 
+            placeholder="Buscar proyectos por nombre..." 
+            [(ngModel)]="filter"
+            (keyup.enter)="search()" 
+            class="search-field" 
+          />
+        </div>
+
+        <button class="reset-btn" (click)="filter.set(''); search()">
+          <ng-icon name="lucideRefreshCw" class="reset-icon" size="18"></ng-icon>
+        </button>
+      </div>
+    </div>
+
+    <div class="projects-grid">
+      @for (project of filteredProject(); track project.id) {
+        <article class="project-card" (click)="goToDetails(project.id!)">
+          <div class="card-content">
+            <h3 class="project-title">{{ project.name }}</h3>
+            <p class="description">{{ project.description }}</p>
+          </div>
+
+          <ul class="tech-list" aria-label="Tecnologías utilizadas">
+            @for (tech of project.tecnologies; track tech.id) {
+              <li class="tech-chip">
+                {{ tech.name }}
+              </li>
+            }
+          </ul>
+        </article>
+      } @empty {
+        <div class="empty-search-state">
+          <p class="description">No se encontraron proyectos</p>
+        </div>
+      }
+    </div>
+
+  </div>
+</section>

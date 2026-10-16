@@ -3,9 +3,13 @@ import { ProjectListComponent } from '../../../projects/pages/project-list/proje
 import { Router, RouterLink } from '@angular/router';
 import { ProjectService } from '../../../projects/services/project-service/project-service';
 import { Project } from '../../../projects/models/project';
+import { ProjectSectionComponent } from '../../components/project-section/project-section.component';
+import { SkillSectionComponent } from '../../components/skill-section/skill-section.component';
+import { ExperienceSectionComponent } from '../../components/experience-section/experience-section.component';
+import { NgIcon } from '@ng-icons/core';
 @Component({
   selector: 'app-admin',
-  imports: [ProjectListComponent, RouterLink],
+  imports: [ProjectSectionComponent,SkillSectionComponent,ExperienceSectionComponent, RouterLink, NgIcon],
   templateUrl: './admin.component.html',
   styleUrl: './admin.component.css'
 })

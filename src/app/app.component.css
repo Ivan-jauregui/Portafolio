@@ -1,25 +1,28 @@
-body{
+
+body {
     display: grid;
     grid-template-rows: auto 1fr auto;
     grid-template-areas: 
-    "header"
-    "main"
-    "footer";
-
+        "header"
+        "main"
+        "footer";
     min-height: 100vh;
-    margin: 0;
-    padding: 0;
+
 }
 
-.navbar{
+.navbar {
     grid-area: header;
 }
 
-.main-content{
+.main-content {
     grid-area: main;
     overflow-y: auto;
+    display: flex;       
+    flex-direction: column;
+    background-color: #0b0f19;
+    padding-top: 60px;
 }
 
-.footer{
+.footer {
     grid-area: footer;
 }

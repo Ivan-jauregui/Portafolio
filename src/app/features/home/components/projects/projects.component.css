@@ -1,13 +1,7 @@
-/* Reset local */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 .projects-section {
   width: 100%;
-  background-color: #161a23; /* Fondo azul noche de la paleta */
+  min-height: 100vh;
+  background-color: #0b0f19;
   color: #ffffff;
   padding: 80px 20px;
   display: flex;
@@ -28,14 +22,14 @@
   color: #ffffff;
 }
 
-/* Grilla de proyectos en 2 columnas (adaptable) */
+
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 24px;
 }
 
-/* Tarjeta de proyecto */
+
 .project-card {
   background-color: #222836;
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -45,12 +39,12 @@
   flex-direction: column;
   justify-content: space-between;
   gap: 20px;
-  transition: transform 0.2s ease, border-color 0.2s ease;
+  transition: 0.2s ease;
 }
 
 .project-card:hover {
   transform: translateY(-3px);
-  border-color: #ff5364; /* Acento coral neón al hacer hover */
+  border-color: #ff5364;
 }
 
 .card-content {
@@ -71,7 +65,6 @@
   color: #9da8b6;
 }
 
-/* Chips / Pills de tecnologías */
 .tech-list {
   display: flex;
   flex-wrap: wrap;

@@ -1,0 +1,23 @@
+   <section class="projects-section">
+        <h2>Proyectos Actuales</h2>
+        
+        <div class="projects-grid">
+            @for (project of projects(); track project.id || $index) {
+                <article class="card">
+                    <h3 class="project-title">{{project?.name}}</h3>
+                    <p class="project-description">{{project?.description}}</p>
+                    
+                    <div class="technology-list">
+                        @for (technology of project?.tecnologies; track technology.id || $index) {
+                            <span class="technology-badge">{{technology.name}}</span>
+                        }
+                    </div>
+                    
+                    <div class="card-actions">
+                        <button class="btn btn-update" (click)="goToUpdate(project.id!)">Actualizar</button>
+                        <button class="btn btn-delete" (click)="deleteProject(project.id!)">Eliminar</button>
+                    </div>
+                </article>
+            }
+        </div>
+    </section>

@@ -1,0 +1,56 @@
+@if (project()) {
+  <div class="project-details-page-wrapper">
+    <div class="project-details-container">
+      
+
+      <header class="section-header-admin">
+        <div class="header-left">
+          <button routerLink="/projects" class="action-btn back-btn back-btn">
+            <ng-icon name="lucideArrowLeft" size="16"></ng-icon>
+            Volver al listado
+          </button>
+          <div class="title-meta-group">
+            <span class="detail-badge-type">Proyecto</span>
+            <h2 class="section-title">Detalle del Proyecto</h2>
+          </div>
+        </div>
+      </header>
+
+
+      <main class="project-detail-panel">
+        
+
+        <section class="panel-main-content">
+          <h3 class="detail-name">{{ project()!.name }}</h3>
+          
+          <div class="detail-description-section">
+            <h4 class="detail-subtitle">Descripción del Proyecto</h4>
+            <p class="detail-description-text">
+              {{ project()!.description }}
+            </p>
+          </div>
+        </section>
+
+
+        <aside class="panel-sidebar-content">
+          <div class="sidebar-box">
+            <h4 class="detail-subtitle">Tecnologías y Stack</h4>
+            <div class="technology-container">
+              @for (tecnology of project()!.tecnologies; track $index) {
+                <span class="technology-tag">{{ tecnology?.name }}</span>
+              }
+            </div>
+          </div>
+        </aside>
+
+      </main>
+
+    </div>
+  </div>
+} @else {
+  <div class="project-details-page-wrapper style-empty">
+    <div class="empty-state">
+      <p class="empty-text">No se encontró información para este proyecto.</p>
+    </div>
+  </div>
+}

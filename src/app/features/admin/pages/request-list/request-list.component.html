@@ -1,0 +1,54 @@
+<section class="admin-requests-section">
+
+  <div class="section-header-admin">
+    <h2 class="section-title">Solicitudes de Proyectos</h2>
+  </div>
+
+  <div class="requests-grid">
+    @for (req of requests(); track req.id ?? req.email) {
+    <div class="request-admin-card">
+      <div class="req-main-info">
+        <div class="req-header-row">
+          <span class="req-type">{{ req?.projectType }}</span>
+          <h3 class="req-applicant">{{ req?.applicantName }}</h3>
+        </div>
+
+     
+        <div class="req-info-wrapper">
+          <ng-icon name="lucideMail" size="14"></ng-icon>
+          <span>{{ req?.email }}</span>
+        </div>
+
+        <!-- Presupuesto -->
+        <div class="req-badge">
+          Presupuesto: {{ req?.budget }}
+        </div>
+
+
+        <p class="req-description">
+          {{ req?.description }}
+        </p>
+      </div>
+
+      <div>
+        <div class="req-info-wrapper" style="margin-bottom: 12px;">
+          <ng-icon name="lucideCalendar" size="14"></ng-icon>
+          <span>Fecha estimada: {{ req?.estimatedDate }}</span>
+        </div>
+
+        <div class="card-actions">
+
+          <button class="action-btn delete-btn" (click)="goToDetails(req!.id!)">
+            <ng-icon name="lucideSearch" size="14"></ng-icon>
+            Detalles
+          </button>
+        </div>
+      </div>
+    </div>
+    } @empty {
+    <div class="empty-state">
+      <p class="description">No hay solicitudes de proyectos registradas por el momento.</p>
+    </div>
+    }
+  </div>
+</section>

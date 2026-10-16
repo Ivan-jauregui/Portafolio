@@ -1,0 +1,75 @@
+@if (request()) {
+  <div class="admin-detail-container">
+   
+
+    <header class="detail-header">
+      <button routerLink="/project/requests" class="back-btn">
+        <ng-icon name="lucideArrowLeft" size="18"></ng-icon>
+        Volver al listado
+      </button>
+      <div class="header-titles">
+        <span class="project-tag">{{ request()!.projectType }}</span>
+        <h2 class="page-title">Detalle de la Solicitud</h2>
+      </div>
+    </header>
+
+    
+    <div class="detail-grid">
+      
+   
+      <main class="detail-main-content">
+        <section class="info-section">
+          <h3 class="section-subtitle">Descripción del Proyecto</h3>
+          <p class="project-description">
+            {{ request()!.description }}
+          </p>
+        </section>
+      </main>
+
+    
+      <aside class="detail-sidebar">
+        
+
+        <div class="sidebar-card">
+          <h3 class="card-subtitle">Solicitante</h3>
+          <h4 class="applicant-name">{{ request()!.applicantName }}</h4>
+          
+          <div class="contact-item">
+            <ng-icon name="lucideMail" size="16"></ng-icon>
+            <span>{{ request()!.email }}</span>
+          </div>
+        </div>
+
+  
+        <div class="sidebar-card financial-card">
+          <div class="meta-item">
+            <ng-icon name="lucideCalendar" size="16"></ng-icon>
+            <div>
+              <label>Fecha estimada de entrega</label>
+              <span>{{ request()!.estimatedDate }}</span>
+            </div>
+          </div>
+
+          <div class="meta-item budget-item">
+            <ng-icon name="lucideDollarSign" size="16"></ng-icon>
+            <div>
+              <label>Presupuesto propuesto</label>
+              <span class="budget-value">{{ request()!.budget }}</span>
+            </div>
+          </div>
+        </div>
+
+     
+        <div class="sidebar-card actions-card">
+          <h3 class="card-subtitle">Administración</h3>
+          <button class="btn-delete-full" (click)="deleteRequest(request()!.id!)">
+            <ng-icon name="lucideTrash2" size="16"></ng-icon>
+            Eliminar permanentemente
+          </button>
+        </div>
+
+      </aside>
+
+    </div>
+  </div>
+}

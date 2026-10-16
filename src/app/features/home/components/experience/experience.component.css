@@ -1,13 +1,8 @@
-/* Reset local */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
 
 .experience-section {
   width: 100%;
-  background-color: #161a23; /* Fondo azul noche */
+  min-height: 100vh;
+  background-color: #10131a; 
   color: #ffffff;
   padding: 80px 20px;
   display: flex;
@@ -29,20 +24,19 @@
   text-align: center;
 }
 
-/* Contenedor principal de la línea de tiempo */
+
 .timeline-wrapper {
   position: relative;
   width: 100%;
 }
 
-/* Línea vertical central/izquierda de la timeline */
 .timeline-line {
   position: absolute;
   top: 10px;
   bottom: 10px;
-  left: 15px; /* Posición alineada con los círculos */
+  left: 15px; 
   width: 2px;
-  background-color: rgba(255, 83, 100, 0.3); /* Línea con tono coral suave */
+  background-color: rgba(255, 83, 100, 0.3);
   z-index: 1;
 }
 
@@ -54,14 +48,14 @@
   z-index: 2;
 }
 
-/* Elemento individual de la línea de tiempo */
+
 .timeline-item {
   display: flex;
   align-items: flex-start;
   gap: 30px;
 }
 
-/* Nodo / Círculo de la línea de tiempo (estilo imagen 1) */
+
 .timeline-node {
   flex-shrink: 0;
   width: 32px;
@@ -70,7 +64,7 @@
   align-items: center;
   justify-content: center;
   background-color: #161a23;
-  border: 2px solid #ff5364; /* Borde coral neón */
+  border: 2px solid #ff5364;
   border-radius: 50%;
   margin-top: 4px;
   box-shadow: 0 0 10px rgba(255, 83, 100, 0.3);

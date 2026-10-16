@@ -1,0 +1,24 @@
+<section class="skills-section" aria-labelledby="skills-title">
+  <div class="skills-container">
+    <div class="section-header">
+      <span class="section-badge">Stack</span>
+      <h2 id="skills-title" class="section-title">
+        Skills and tools</h2>
+    </div>
+
+    <div class="skills-grid">
+      @for (skill of skills(); track skill.id) {
+        <article class="skill-card">
+          <div class="icon-wrapper">
+            <img [src]="skill.icon" [alt]="skill.name" class="skill-icon" width="32" height="32" loading="lazy" />
+          </div>
+          <span class="skill-name">{{ skill.name }}</span>
+        </article>
+      } @empty {
+        <div class="empty-state">
+          <p class="description">No hay tecnologías registradas por el momento.</p>
+        </div>
+      }
+    </div>
+  </div>
+</section>

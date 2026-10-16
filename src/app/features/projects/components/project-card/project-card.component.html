@@ -1,9 +1,15 @@
-<div class="card-container">
-    <p>{{project?.name}}</p>
-    <p>{{project?.description}}</p>
-    <div class="tecnology-container">
-    @for (tecnology of project?.tecnologies; track $index) {
-        <p class="tecnology-item">{{tecnology.name}}</p>
-    }
+@if (project) {
+  <div class="project-card">
+    <div class="project-info">
+      <h3 class="project-name">{{ project.name }}</h3>
+      <p class="project-description">{{ project.description }}</p>
     </div>
-</div>
+
+    <!-- Contenedor de tecnologías -->
+    <div class="technology-container">
+      @for (tecnology of project.tecnologies; track $index) {
+        <span class="technology-tag">{{ tecnology.name }}</span>
+      }
+    </div>
+  </div>
+}

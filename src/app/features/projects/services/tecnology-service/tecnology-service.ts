@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class TecnologyService {
   private http = inject(HttpClient);
-  private apiUrl = "http://localhost:5000/tecnologies"
+  private apiUrl = "http://localhost:3000/tecnologies"
 
   save(req:Tecnology):Observable<Tecnology>{
     return this.http.post<Tecnology>(this.apiUrl,req)

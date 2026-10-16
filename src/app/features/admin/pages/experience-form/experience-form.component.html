@@ -1,0 +1,117 @@
+<main class="form-container">
+  <div class="form-card">
+    <div class="form-header">
+      <h2 class="form-title">
+        {{ idParam() ? 'Editar Experiencia' : 'Nueva Experiencia' }}
+      </h2>
+      <p class="form-subtitle">Completa los detalles de tu trayectoria profesional.</p>
+    </div>
+
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" class="styled-form" novalidate>
+      
+      <!-- Rol / Puesto -->
+      <div class="form-group">
+        <label for="role">Puesto / Rol *</label>
+        <input 
+          id="role" 
+          type="text" 
+          formControlName="role" 
+          placeholder="Ej: Senior Backend Developer"
+          [class.is-invalid]="form.get('role')?.touched && form.get('role')?.invalid"
+        />
+        @if (form.get('role')?.touched && form.get('role')?.errors?.['required']) {
+          <span class="error-text">El puesto es obligatorio.</span>
+        }
+        @if (form.get('role')?.touched && form.get('role')?.errors?.['minlength']) {
+          <span class="error-text">Debe tener al menos 3 caracteres.</span>
+        }
+      </div>
+
+      
+      <div class="form-row">
+        <!-- Empresa -->
+        <div class="form-group">
+          <label for="company">Empresa / Organización *</label>
+          <input 
+            id="company-input" 
+            type="text" 
+            formControlName="company" 
+            placeholder="Ej: Tech Corp"
+            [class.is-invalid]="form.get('company')?.touched && form.get('company')?.invalid"
+          />
+          @if (form.get('company')?.touched && form.get('company')?.errors?.['required']) {
+            <span class="error-text">La empresa es obligatoria.</span>
+          }
+        </div>
+
+        <!-- Periodo -->
+        <div class="form-group">
+          <label for="period">Periodo *</label>
+          <input 
+            id="period" 
+            type="text" 
+            formControlName="period" 
+            placeholder="Ej: Ene 2024 - Presente"
+            [class.is-invalid]="form.get('period')?.touched && form.get('period')?.invalid"
+          />
+          @if (form.get('period')?.touched && form.get('period')?.errors?.['required']) {
+            <span class="error-text">El periodo es obligatorio.</span>
+          }
+        </div>
+      </div>
+
+      <!-- Insignia / Badge (Opcional) -->
+      <div class="form-group">
+        <label for="badge">Insignia o Certificación (Opcional)</label>
+        <input 
+          id="badge" 
+          type="text" 
+          formControlName="badge" 
+          placeholder="Ej: Certificado oficial / Destacado"
+        />
+      </div>
+
+      <!-- Descripción -->
+      <div class="form-group">
+        <label for="description">Descripción de responsabilidades *</label>
+        <textarea 
+          id="description" 
+          rows="4" 
+          formControlName="description" 
+          placeholder="Detalla tus logros, arquitectura implementada o tareas destacadas..."
+          [class.is-invalid]="form.get('description')?.touched && form.get('description')?.invalid"
+        ></textarea>
+        @if (form.get('description')?.touched && form.get('description')?.errors?.['required']) {
+          <span class="error-text">La descripción es obligatoria.</span>
+        }
+      </div>
+
+      <!-- Selector de Tecnologías -->
+      <div class="form-group">
+        <label>Tecnologías utilizadas</label>
+        <div class="technologies-selector">
+          @for (tec of tecnologies(); track tec.id) {
+            <button 
+              type="button" 
+              class="tech-chip" 
+              [class.active]="isTechSelected(tec.id!)"
+              (click)="selectTecnology(tec)"
+            >
+              {{ tec.name }}
+            </button>
+          } @empty {
+            <p class="empty-tech">No hay tecnologías cargadas en el sistema.</p>
+          }
+        </div>
+      </div>
+
+      <div class="form-actions">
+        <button type="button" class="btn-cancel" routerLink="/admin">Cancelar</button>
+        <button type="submit" class="btn-submit" [disabled]="form.invalid">
+          {{ idParam() ? 'Guardar Cambios' : 'Crear Experiencia' }} <ng-icon name="lucideRocket" size="18"></ng-icon>
+        </button>
+      </div>
+
+    </form>
+  </div>
+</main>

@@ -1,13 +1,13 @@
-<header>
-
-    <div>
-        Logo
+<header class="navbar">
+    <div class="nav-logo">
+        <span class="logo-text" routerLink="">Ivan<span class="logo-accent">Dev</span></span>
     </div>
-    <nav>
+    <nav class="nav-menu">
         <ul>
-            <li><a routerLink="">Home</a></li>
-            <li><a routerLink="/projects">Projects</a></li>
-            <li><a routerLink="/admin">Admin</a></li>
+            <li><a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a></li>
+            <li><a routerLink="/projects" routerLinkActive="active">Projects</a></li>
+            <li><a routerLink="" fragment="about" >About</a></li>
+            <li class="contact-link"><a routerLink="" fragment="contact">Contact</a></li>
         </ul>
     </nav>
 </header>

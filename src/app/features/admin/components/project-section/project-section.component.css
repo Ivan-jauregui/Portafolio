@@ -1,0 +1,99 @@
+
+/* Sección de Proyectos */
+.projects-section h2 {
+    font-size: 1.4rem;
+    color: #9ca3af;
+    margin-bottom: 1.5rem;
+}
+
+/* Grid Autoadaptable (Evita que se rompa en celulares) */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Tarjeta Estilo Dark Premium */
+.card {
+    background-color: #111827;
+    border: 1px solid #1f2937;
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+    border-color: #374151;
+}
+
+.project-title {
+    font-size: 1.25rem;
+    margin: 0 0 0.5rem 0;
+    color: #ffffff;
+}
+
+.project-description {
+    color: #9ca3af;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0 0 1.25rem 0;
+    flex-grow: 1; /* Hace que todas las tarjetas midan lo mismo internamente */
+}
+
+/* Badges de Tecnologías */
+.technology-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.technology-badge {
+    background-color: #1f2937;
+    color: #60a5fa;
+    border: 1px solid #374151;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+/* Botones Base */
+.btn {
+    font-weight: 600;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.2s ease, opacity 0.2s ease;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+/* Acciones de la Tarjeta */
+.card-actions {
+    display: flex;
+    gap: 0.75rem;
+    border-top: 1px solid #1f2937;
+    padding-top: 1rem;
+}
+
+.btn-update {
+    background-color: #f59e0b;
+    color: #111827;
+    flex: 1;
+}
+
+.btn-delete {
+    background-color: #ef4444;
+    color: #ffffff;
+    flex: 1;
+}

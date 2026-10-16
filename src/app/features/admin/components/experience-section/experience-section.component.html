@@ -1,0 +1,60 @@
+<section class="admin-experiences-section" aria-labelledby="exp-section-title">
+  <div class="section-header-admin">
+    <h2 id="exp-section-title" class="section-title">Gestión de Experiencia Profesional</h2>
+    <button routerLink="/form/experience" class="create-btn">
+      <ng-icon name="lucidePlus" size="18"></ng-icon>
+      Agregar Experiencia
+    </button>
+  </div>
+
+  <div class="experiences-grid">
+    @for (exp of experiences(); track exp.id) {
+      <article class="experience-admin-card">
+        <div class="exp-main-info">
+          <div class="exp-header-row">
+            <h3 class="exp-role">{{ exp.role }}</h3>
+            <span class="exp-company"> {{ exp.company }}</span>
+          </div>
+          
+          <div class="exp-period-wrapper">
+            <ng-icon name="lucideCalendar" size="16"></ng-icon>
+            <span class="exp-period">{{ exp.period }}</span>
+          </div>
+          
+          @if (exp.badge) {
+            <span class="exp-badge">
+                <ng-icon name="lucideAward" size="18"></ng-icon>
+                {{ exp.badge }}</span>
+          }
+          
+          <p class="exp-description">{{ exp.description }}</p>
+        </div>
+
+        <!-- Tecnologías asociadas -->
+        @if (exp.tecnologies && exp.tecnologies.length > 0) {
+          <div class="exp-tech-list">
+            @for (tech of exp.tecnologies; track tech.id) {
+              <span class="tech-tag">{{ tech.name }}</span>
+            }
+          </div>
+        }
+
+        <!-- Botones de Acción Admin con Iconos -->
+        <div class="card-actions">
+          <button class="action-btn edit-btn" (click)="goToUpdate(exp.id!)" title="Editar Experiencia">
+            <ng-icon name="lucidePencil" size="16"></ng-icon>
+            <span>Editar</span>
+          </button>
+          <button class="action-btn delete-btn" (click)="deleteExperience(exp.id!)" title="Eliminar Experiencia">
+            <ng-icon name="lucideTrash2" size="16"></ng-icon>
+            <span>Eliminar</span>
+          </button>
+        </div>
+      </article>
+    } @empty {
+      <div class="empty-state">
+        <p class="description">No hay experiencias profesionales registradas en el sistema.</p>
+      </div>
+    }
+  </div>
+</section>

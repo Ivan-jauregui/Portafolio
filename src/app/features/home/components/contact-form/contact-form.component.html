@@ -1,0 +1,144 @@
+<section class="contact-section" id="contact">
+  <div class="contact-container">
+    <div class="section-header">
+      <span class="section-badge">¿Tenés un proyecto en mente?</span>
+      <h2 id="contact-title" class="section-title">Enviá tu Solicitud</h2>
+      <p class="section-subtitle">
+        Completá el formulario para cotizar tu idea o desarrollo a medida.
+      </p>
+    </div>
+
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" class="contact-form" novalidate>
+      
+      <!-- Mensajes de feedback -->
+      @if (successMessage()) {
+        <div class="alert alert-success">
+           {{ successMessage() }}
+        </div>
+      }
+
+      @if (errorMessage()) {
+        <div class="alert alert-error">
+           {{ errorMessage() }}
+        </div>
+      }
+
+      <div class="form-grid">
+        <!-- Nombre -->
+        <div class="form-group">
+          <label for="applicantName">Nombre completo *</label>
+          <input 
+            id="applicantName" 
+            type="text" 
+            formControlName="applicantName"
+            placeholder="Ej: John Doe"
+            [class.is-invalid]="f['applicantName'].touched && f['applicantName'].invalid"
+          />
+          @if (f['applicantName'].touched && f['applicantName'].errors?.['required']) {
+            <span class="error-text">El nombre es obligatorio.</span>
+          }
+          @if (f['applicantName'].touched && f['applicantName'].errors?.['minlength']) {
+            <span class="error-text">Ingresá al menos 3 caracteres.</span>
+          }
+        </div>
+
+        <!-- Email -->
+        <div class="form-group">
+          <label for="email">Correo electrónico *</label>
+          <input 
+            id="email" 
+            type="email" 
+            formControlName="email"
+            placeholder="ejemplo@correo.com"
+            [class.is-invalid]="f['email'].touched && f['email'].invalid"
+          />
+          @if (f['email'].touched && f['email'].errors?.['required']) {
+            <span class="error-text">El email es obligatorio.</span>
+          }
+          @if (f['email'].touched && f['email'].errors?.['email']) {
+            <span class="error-text">Ingresá un email válido.</span>
+          }
+        </div>
+
+        <!-- Tipo de Proyecto -->
+        <div class="form-group">
+          <label for="projectType">Tipo de proyecto *</label>
+          <select 
+            id="projectType" 
+            formControlName="projectType"
+            [class.is-invalid]="f['projectType'].touched && f['projectType'].invalid"
+          >
+            <option value="" disabled selected>Seleccioná una opción</option>
+            <option value="Web App / Frontend">Desarrollo Web / Frontend</option>
+            <option value="Backend / API REST">Backend & API REST</option>
+            <option value="Full Stack System">Sistema Full Stack</option>
+            <option value="Mobile App">Aplicación Móvil</option>
+            <option value="Consultancy">Consultoría / Auditoría</option>
+          </select>
+          @if (f['projectType'].touched && f['projectType'].errors?.['required']) {
+            <span class="error-text">Seleccioná el tipo de proyecto.</span>
+          }
+        </div>
+
+        <!-- Presupuesto Estimado -->
+        <div class="form-group">
+          <label for="budget">Presupuesto estimado (USD) *</label>
+          <input 
+            id="budget" 
+            type="number" 
+            formControlName="budget"
+            placeholder="Ej: 500"
+            min="100"
+            [class.is-invalid]="f['budget'].touched && f['budget'].invalid"
+          />
+          @if (f['budget'].touched && f['budget'].errors?.['required']) {
+            <span class="error-text">El presupuesto es obligatorio.</span>
+          }
+          @if (f['budget'].touched && f['budget'].errors?.['min']) {
+            <span class="error-text">El presupuesto mínimo es $100 USD.</span>
+          }
+        </div>
+
+        <!-- Fecha Aproximada -->
+        <div class="form-group full-width">
+          <label for="estimatedDate">Fecha estimada de entrega *</label>
+          <input 
+            id="estimatedDate" 
+            type="date" 
+            formControlName="estimatedDate"
+            [class.is-invalid]="f['estimatedDate'].touched && f['estimatedDate'].invalid"
+          />
+          @if (f['estimatedDate'].touched && f['estimatedDate'].errors?.['required']) {
+            <span class="error-text">La fecha estimada es obligatoria.</span>
+          }
+        </div>
+
+        <!-- Descripción -->
+        <div class="form-group full-width">
+          <label for="description">Descripción de la idea o necesidad *</label>
+          <textarea 
+            id="description" 
+            rows="5" 
+            formControlName="description"
+            placeholder="Detallá los objetivos, requerimientos clave y funcionalidades esperadas..."
+            [class.is-invalid]="f['description'].touched && f['description'].invalid"
+          ></textarea>
+          @if (f['description'].touched && f['description'].errors?.['required']) {
+            <span class="error-text">La descripción es obligatoria.</span>
+          }
+          @if (f['description'].touched && f['description'].errors?.['minlength']) {
+            <span class="error-text">Escribí al menos 15 caracteres descriptivos.</span>
+          }
+        </div>
+      </div>
+
+      <button type="submit" class="submit-btn" [disabled]="isSubmitting()">
+        @if (isSubmitting()) {
+          <span>Enviando solicitud...</span>
+        } @else {
+          <span>Enviar Solicitud</span>
+        }
+      </button>
+    </form>
+  </div>
+</section>

@@ -1,0 +1,24 @@
+<section class="admin-skills-section">
+  <div class="section-header">
+    <h2 class="section-title">Gestión de Tech Stack / Skills</h2>
+  </div>
+
+  <div class="skills-grid">
+    @for (skill of skills(); track skill.id) {
+      <article class="skill-admin-card">
+        <div class="skill-info">
+          <img [src]="skill.icon" [alt]="skill.name" class="skill-icon" width="32" height="32" />
+          <span class="skill-name">{{ skill.name }}</span>
+        </div>
+
+        <div class="card-actions">
+          <button class="action-btn delete-btn" (click)="deleteSkill(skill.id)" title="Eliminar Skill">
+            <ng-icon name="lucideTrash2" size="14"></ng-icon>
+          </button>
+        </div>
+      </article>
+    } @empty {
+      <p class="empty-message">No hay habilidades registradas en el servidor.</p>
+    }
+  </div>
+</section>

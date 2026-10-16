@@ -1,50 +1,65 @@
 <div class="form-wrapper">
-
-<div class="form-container">
-<form [formGroup]="form" (submit)="onSubmit()">
-    <fieldset>
-        <label for="">Nombre</label>
-        <input type="text" placeholder="Introduce Nombre..." formControlName="name">
-        @if (form.get('name')?.hasError('required') && form.get('name')?.touched) {
-            <p>El nombre es requerido</p>
-        }@else if (form.get('name')?.hasError('minlength') && form.get('name')?.touched) {
-            <p>El nombre tiene que tener mas de 3 caracteres</p>
-        }@else if (form.get('name')?.hasError('maxlength') && form.get('name')?.touched) {
-            <p>El nombre tiene que tener menor de 25 caracteres</p>
-        }
-    </fieldset>
-
-    <fieldset>
-        <label for="">Descripcion</label>
-        <input type="text" placeholder="Introduce descripcion..." formControlName="description">
-        @if (form.get('descripcion')?.hasError('required') && form.get('descripcion')?.touched) {
-            <p>La descripcion es requerido</p>
-        }
-    </fieldset>
+  <div class="form-container">
+    <h2 class="form-title">Crear Nuevo Proyecto</h2>
     
-    <fieldset>
-    <label for="">Tecnologias</label>
-    <div class="technologies-container">
-        @for (tec of tecnologies(); track $index) {
-                <p (click)="selectTecnology(tec)" style="cursor: pointer;" class="technology-item">{{tec.name}}</p>
-            }
-    </div>
-    </fieldset>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      
+      <!-- Campo Nombre -->
+      <fieldset class="form-group">
+        <label for="name">Nombre</label>
+        <input id="name" type="text" placeholder="Introduce el nombre del proyecto..." formControlName="name">
+        
+        @if (form.get('name')?.hasError('required') && form.get('name')?.touched) {
+          <span class="error-message">El nombre es requerido</span>
+        } @else if (form.get('name')?.hasError('minlength') && form.get('name')?.touched) {
+          <span class="error-message">El nombre debe tener más de 3 caracteres</span>
+        } @else if (form.get('name')?.hasError('maxlength') && form.get('name')?.touched) {
+          <span class="error-message">El nombre debe tener menos de 25 caracteres</span>
+        }
+      </fieldset>
 
-    <div class="selected-technologies-container">
-        <p>Tecnologias seleccionadas</p>
-        <div class="selected-technologies">
-         @for (tec of selectedTecnologies(); track $index) {
-                <p class="selected-tecnology-card">{{tec.name}}</p>
-            }
+      <!-- Campo Descripción -->
+      <fieldset class="form-group">
+        <label for="description">Descripción</label>
+        <input id="description" type="text" placeholder="Introduce una breve descripción..." formControlName="description">
+        
+        @if (form.get('description')?.hasError('required') && form.get('description')?.touched) {
+          <span class="error-message">La descripción es requerida</span>
+        }
+      </fieldset>
+      
+      <!-- Tecnologías Disponibles -->
+      <fieldset class="form-group">
+        <label>Tecnologías disponibles</label>
+        <div class="technologies-container">
+          @for (tec of tecnologies(); track $index) {
+            <button type="button" (click)="selectTecnology(tec)" class="technology-item">
+              {{tec.name}}
+            </button>
+          }
         </div>
-    </div>
+      </fieldset>
 
-    <div class="action-btn">
-    <button>Crear proyecto</button>
-    </div>
-</form>
+      <!-- Tecnologías Seleccionadas -->
+      <!-- Tecnologías Seleccionadas -->
+      <div class="selected-technologies-container">
+        <label class="selected-label">Tecnologías seleccionadas</label>
+        <div class="selected-technologies">
+          
+          @for (tec of selectedTecnologies(); track $index) {
+            <span class="selected-technology-card">{{tec.name}}</span>
+          } @empty {
+            <p class="empty-selection">No hay tecnologías seleccionadas</p>
+          }
 
-</div>
+        </div>
+      </div>
 
+      <!-- Botón de Acción -->
+      <div class="action-btn">
+        <button type="submit" class="btn-submit">Crear proyecto</button>
+      </div>
+
+    </form>
+  </div>
 </div>

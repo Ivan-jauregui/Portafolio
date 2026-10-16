@@ -1,13 +1,7 @@
-/* Reset local para evitar márgenes o rellenos no deseados */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 .section-container {
   width: 100%;
-  background-color: #161a23; /* Fondo azul noche de la paleta */
+  min-height: 80vh;
+  background-color: #10131a;
   color: #ffffff;
   padding: 80px 20px;
   display: flex;
@@ -37,7 +31,7 @@
   margin-bottom: 16px;
 }
 
-/* Tarjeta interna en tono azul slate */
+
 .about-card {
   background-color: #222836;
   border: 1px solid rgba(255, 255, 255, 0.1);

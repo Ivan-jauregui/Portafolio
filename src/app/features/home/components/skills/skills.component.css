@@ -1,0 +1,123 @@
+
+.skills-section {
+  width: 100%;
+  min-height: 100vh;
+  background-color:#0b0f19;
+  color: #ffffff;
+  padding: 90px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skills-container {
+  width: 100%;
+  max-width: 1080px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+
+.section-header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.section-badge {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #ff5364;
+}
+
+.section-title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+}
+
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 20px;
+}
+
+.skill-card {
+  position: relative;
+  background: rgba(34, 40, 54, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  cursor: default;
+  overflow: hidden;
+  transition: 0.25s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-4px);
+  background: rgba(34, 40, 54, 0.95);
+  border-color: rgba(255, 83, 100, 0.5);
+  box-shadow: 0 10px 28px -6px rgba(255, 83, 100, 0.25),
+              0 0 0 1px rgba(255, 83, 100, 0.2);
+}
+
+.icon-wrapper {
+  width: 44px;
+  height: 44px;
+  background-color: rgba(22, 26, 35, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: 0.25s ease;
+}
+
+.skill-card:hover .icon-wrapper {
+  transform: scale(1.08);
+  border-color: rgba(255, 83, 100, 0.3);
+}
+
+.skill-icon {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+}
+
+/* Tipografía de la Habilidad */
+.skill-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #e2e8f0;
+  letter-spacing: 0.01em;
+  transition: color 0.25s ease;
+}
+
+.skill-card:hover .skill-name {
+  color: #ffffff;
+}
+
+.empty-state {
+  grid-column: 1 / -1;
+  padding: 40px;
+  text-align: center;
+  background-color: #222836;
+  border-radius: 16px;
+  border: 1px dashed rgba(255, 255, 255, 0.1);
+}
+
+.description {
+  font-size: 0.95rem;
+  color: #9da8b6;
+}

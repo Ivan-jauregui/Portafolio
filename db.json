@@ -1,133 +1,334 @@
 {
   "projects": [
     {
-      "name": "blabalbal",
-      "description": "blablala",
+      "id": "sal-01",
+      "name": "Saliendo al mundo",
+      "description": "Plataforma web enfocada en documentar experiencias, proyectos personales y un espacio de desarrollo de vida.",
       "tecnologies": [
         {
-          "id": "2",
+          "id": "1",
           "name": "Angular"
+        },
+        {
+          "id": "2",
+          "name": "TypeScript"
         },
         {
           "id": "3",
-          "name": "Vue.js"
-        },
-        {
-          "id": "1",
-          "name": "React"
+          "name": "Tailwind CSS"
         }
-      ],
-      "id": "0n_kUVzWi_M"
+      ]
     },
     {
-      "name": "hola",
-      "description": "chau",
+      "id": "gym-02",
+      "name": "Sistema Gym",
+      "description": "Sistema integral de gestión para gimnasios, control de socios, membresías, asistencias y rutinas.",
       "tecnologies": [
         {
-          "id": "6",
-          "name": "JavaScript"
-        },
-        {
-          "id": "10",
-          "name": "NestJS"
-        },
-        {
-          "id": "7",
-          "name": "HTML5"
-        },
-        {
-          "id": "2",
-          "name": "Angular"
+          "id": "4",
+          "name": "Java"
         },
         {
           "id": "5",
-          "name": "TypeScript"
+          "name": "Spring Boot"
+        },
+        {
+          "id": "6",
+          "name": "PostgreSQL"
+        }
+      ]
+    },
+    {
+      "id": "rag-03",
+      "name": "RAG - Aprendizaje de Base de Datos",
+      "description": "Sistema RAG alimentado con información técnica de bases de datos para responder preguntas y optimizar el proceso de aprendizaje.",
+      "tecnologies": [
+        {
+          "id": "7",
+          "name": "Python"
         },
         {
           "id": "8",
-          "name": "CSS3"
+          "name": "LangChain"
+        },
+        {
+          "id": "9",
+          "name": "PostgreSQL"
         }
-      ],
-      "id": "L0vtbtbiZMY"
+      ]
     },
     {
-      "id": "07d0",
-      "name": "rer",
-      "description": "rere",
+      "id": "bal-04",
+      "name": "Balnea",
+      "description": "Plataforma de gestión para balnearios de playa con reservas de carpas, control de acceso por roles y mapas interactivos.",
       "tecnologies": [
         {
-          "id": "1",
-          "name": "React"
+          "id": "4",
+          "name": "Java"
         },
         {
           "id": "5",
+          "name": "Spring Boot"
+        },
+        {
+          "id": "6",
+          "name": "PostgreSQL"
+        },
+        {
+          "id": "1",
+          "name": "Angular"
+        }
+      ]
+    },
+    {
+      "id": "doc-05",
+      "name": "Docubot",
+      "description": "Herramienta de gestión para analistas funcionales que utiliza LLMs para transformar chats en casos de uso estructurados.",
+      "tecnologies": [
+        {
+          "id": "10",
+          "name": "Node.js"
+        },
+        {
+          "id": "2",
           "name": "TypeScript"
+        },
+        {
+          "id": "11",
+          "name": "Spring AI"
         }
       ]
     },
     {
-      "id": "074d",
-      "name": "rrr",
-      "description": "rrr",
+      "id": "muv-06",
+      "name": "Muvix",
+      "description": "Plataforma web diseñada para agilizar la venta de muebles y artículos de hogar para personas que se encuentran mudándose.",
       "tecnologies": [
         {
-          "id": "2",
+          "id": "1",
+          "name": "Angular"
+        },
+        {
+          "id": "5",
+          "name": "Spring Boot"
+        },
+        {
+          "id": "6",
+          "name": "PostgreSQL"
+        }
+      ]
+    }
+  ],
+  "tecnologies": [
+    {
+      "id": "1",
+      "name": "React"
+    },
+    {
+      "id": "2",
+      "name": "Angular"
+    },
+    {
+      "id": "3",
+      "name": "Vue.js"
+    },
+    {
+      "id": "4",
+      "name": "Node.js"
+    },
+    {
+      "id": "5",
+      "name": "TypeScript"
+    },
+    {
+      "id": "6",
+      "name": "JavaScript"
+    },
+    {
+      "id": "7",
+      "name": "HTML5"
+    },
+    {
+      "id": "8",
+      "name": "CSS3"
+    },
+    {
+      "id": "9",
+      "name": "Tailwind CSS"
+    },
+    {
+      "id": "10",
+      "name": "NestJS"
+    }
+  ],
+  "experiences": [
+    {
+      "id": "exp-nobleprog",
+      "role": "Corporate Technical Trainer & Backend Consultant",
+      "company": "NobleProg",
+      "period": "Agosto 2026 - Presente",
+      "badge": "Instructor & Consultor",
+      "description": "Imparto capacitación técnica corporativa avanzada y consultoría especializada en desarrollo backend, destacando por competencias técnicas en Java y diseño de arquitecturas robustas.",
+      "tecnologies": [
+        {
+          "id": "java",
+          "name": "Java"
+        },
+        {
+          "id": "spring",
+          "name": "Spring Boot"
+        },
+        {
+          "id": "backend",
+          "name": "Backend Architecture"
+        }
+      ]
+    },
+    {
+      "id": "exp-freelance",
+      "role": "Desarrollador Backend & Full Stack Freelance",
+      "company": "Independiente",
+      "period": "Noviembre 2025 - Presente",
+      "badge": "Freelance",
+      "description": "Desarrollo de soluciones de software a medida, plataformas e-commerce y arquitecturas backend escalables utilizando Java, Spring Boot y tecnologías web modernas.",
+      "tecnologies": [
+        {
+          "id": "java",
+          "name": "Java"
+        },
+        {
+          "id": "spring",
+          "name": "Spring Boot"
+        },
+        {
+          "id": "node",
+          "name": "Node.js"
+        },
+        {
+          "id": "postgres",
+          "name": "PostgreSQL"
+        },
+        {
+          "id": "angular",
           "name": "Angular"
         }
       ]
     },
     {
-      "id": "e8ca",
-      "name": "rrrrr",
-      "description": "rrrr",
+      "id": "exp-gym",
+      "role": "Desarrollador Backend",
+      "company": "Sistema Gestión Gym",
+      "period": "Mayo 2024 - Agosto 2025",
+      "badge": "",
+      "description": "Diseño y desarrollo de la arquitectura backend para la gestión integral de socios, control de accesos, membresías y automatización de procesos operativos.",
+      "tecnologies": [
+        {
+          "id": "3",
+          "name": "Node.js"
+        },
+        {
+          "id": "6",
+          "name": "Express"
+        },
+        {
+          "id": "7",
+          "name": "PostgreSQL"
+        },
+        {
+          "id": "8",
+          "name": "REST API"
+        }
+      ]
+    },
+    {
+      "id": "exp-salendo",
+      "role": "Desarrollador Full Stack",
+      "company": "Saliendo al mundo",
+      "period": "Febrero 2024 - Enero 2025",
+      "badge": "Certificado oficial AEA",
+      "description": "Desarrollo de aplicación móvil y módulos interactivos con certificación oficial de la Asociación Empresarial Argentina (AEA), enfocados en accesibilidad e impacto social.",
       "tecnologies": [
         {
           "id": "2",
-          "name": "Angular"
+          "name": "React Native"
+        },
+        {
+          "id": "3",
+          "name": "Node.js"
+        },
+        {
+          "id": "4",
+          "name": "TypeScript"
+        },
+        {
+          "id": "5",
+          "name": "Tailwind CSS"
         }
       ]
     }
   ],
   "skills": [
-    { 
-      "id": "sk-1", 
-      "name": "Java 21", 
-      "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" 
+    {
+      "id": "sk-1",
+      "name": "Java 21",
+      "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg"
     },
-    { 
-      "id": "sk-2", 
-      "name": "Spring Boot", 
-      "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/spring/spring-original.svg" 
+    {
+      "id": "sk-2",
+      "name": "Spring Boot",
+      "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/spring/spring-original.svg"
     },
-    { 
-      "id": "sk-3", 
-      "name": "Node.js", 
-      "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg" 
+    {
+      "id": "sk-3",
+      "name": "Node.js",
+      "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg"
     },
-    { 
-      "id": "sk-4", 
-      "name": "PostgreSQL", 
-      "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg" 
+    {
+      "id": "sk-4",
+      "name": "PostgreSQL",
+      "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg"
     },
-    { 
-      "id": "sk-5", 
-      "name": "Angular", 
-      "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/angular/angular-original.svg" 
+    {
+      "id": "sk-5",
+      "name": "Angular",
+      "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/angular/angular-original.svg"
     },
-    { 
-      "id": "sk-6", 
-      "name": "TypeScript", 
-      "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" 
+    {
+      "id": "sk-6",
+      "name": "TypeScript",
+      "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg"
     },
-    { 
-      "id": "sk-7", 
-      "name": "React", 
-      "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" 
+    {
+      "id": "sk-7",
+      "name": "React",
+      "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg"
     },
-    { 
-      "id": "sk-8", 
-      "name": "Tailwind CSS", 
-      "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-original.svg" 
+    {
+      "id": "sk-8",
+      "name": "Tailwind CSS",
+      "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-original.svg"
+    }
+  ],
+  "requests": [
+    {
+      "applicantName": "Ivan Jaurefui",
+      "email": "ivanjauregui79@gmail.com",
+      "projectType": "Web App / Frontend",
+      "description": "detalle de proeycto",
+      "budget": 600,
+      "estimatedDate": "2026-10-31",
+      "createdAt": "2026-10-16T13:46:54.436Z",
+      "id": "8BU1EXi-2oA"
+    },
+    {
+      "applicantName": "ddsd",
+      "email": "ivanjauregui79@gmail.com",
+      "projectType": "Full Stack System",
+      "description": "dsadsadasdsdsadasddsadsad",
+      "budget": 323321,
+      "estimatedDate": "2026-10-14",
+      "createdAt": "2026-10-16T15:38:16.556Z",
+      "id": "tOQka8SMPZk"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
