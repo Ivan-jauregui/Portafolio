@@ -1,6 +1,6 @@
 # Portfolio y Gestión de Proyectos - Iván Denzel Jauregui
 
-Plataforma web moderna orientada a la presentación de marca personal, porfolio de proyectos y panel de administración, desarrollada con **Angular** y conectada a una API REST simulada con `json-server`.
+Plataforma web moderna porfolio y panel de administración, desarrollada con **Angular** y conectada a una API REST simulada con `json-server`.
 
 ---
 
